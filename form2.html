@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(images/laptop.webp);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    max-width: 375px;
+    width: 100%;
+    max-height: 390px;
+    height: 100%;
+    box-shadow: 0px 0px 10px #333;
+    border-radius: 10px;
+}
+.container .title{
+    padding: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.container .form-group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px 0;
+}
+.container .form-group input{
+   width: 100%;
+   height: 45px;
+   border: none;
+   outline: none;
+   border-bottom: 3px solid #fff;
+   font-size: 1em;
+   padding: 0 10px;
+   background-color: transparent;
+   color: white;
+}
+
+.container .form-group label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-weight: 600;
+    color: white;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+
+}
+.form-group input:focus ~ label,
+.form-group input:valid ~ label
+{
+    top: -5px;
+  
+}
+.container .form-group i{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: white;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgetpassword{
+    display: flex;
+    justify-content: space-between;
+}
+.forgetpassword label{
+    color: #fff;
+    font-weight: 600;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+}
+button{
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    background : white;
+    color: #333;
+    border-radius: 49px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+button:hover{
+    transition: all 0.4s ease;
+    background-color: rgba(97, 95, 95, 0.912);
+    color: white;
+}
+.new{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Login</div>
+        <form action="#">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Name</label>
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </div>
+
+                <div class="forgetpassword">
+                    <div class="rem">
+                        <input type="checkbox" id="" checked>
+                        <label for="">Rember me</label>
+                    </div>
+                    <a href="#">Forget password</a>
+                </div>
+            
+                <div class="btn">
+                    <button type="submit">login</button>
+                    <div class="new">
+                        Don't have an account?&nbsp;<a href="#">Register</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #71b7e6, #c040f3)
+        }
+        .container{
+            background-color: white; 
+            padding: 20px;
+            margin: 15px;
+            max-width: 900px;
+            width: 100%;
+
+        }
+        .container .title{
+            position: relative;
+          font-size: 25px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        .container .title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 27px;
+            background: linear-gradient(135deg, #71b7e6, #c040f3);
+        }
+        form .feilds{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        form .feilds{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; 
+        }
+        .container form .tit{
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .container form .docu{
+            margin: 27px 1px 10px 0px; 
+            /* margin: 30px 0px; */
+            display: block;
+        }
+        form .feilds label{
+            margin: 5px 0;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        form .feilds .input-feilds{
+            display: flex;
+            flex-direction: column;
+            width: calc(100%/3 - 15px);
+            margin: 8px 0;
+        }
+
+        form .feilds .input-feilds input{
+           width: 100%;
+           height: 33px;
+           padding: 0 5px;
+           outline: none;
+           font-size: 15px;
+           /* border: none; */
+           /* border-bottom: 1px solid #333; */
+           /* border-color: #eee; */
+           /* box-shadow: ; */
+        }
+         .input-feilds input:focus{
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+        } 
+        form .btn{
+            display: block;
+            background: linear-gradient(135deg, #71b7e6, #c040f3);
+            color: white;
+            max-width: 200px;
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            outline: none;
+            border: none;
+            margin-top: 10px;
+            /* border-radius: 10px; */
+            /* text-align: center; */
+            /* height: 40px; */
+        }
+        form .btn:hover{
+            background: linear-gradient(-135deg, #71b7e6, #c040f3);
+
+        }
+        @media screen and (max-width : 750px)
+    {
+   .container form{
+    overflow-y: scroll;
+   }
+   .container form::-webkit-scrollbar{
+    display: none;
+   }
+   form .feilds .input-feilds{
+            width: calc(100%/2 - 15px);
+        }
+}
+
+
+@media screen and (max-width : 540px)
+    {
+ 
+   form .feilds .input-feilds{
+            width: 100%;
+        }
+        form .btn{
+            max-width: 100%;
+        }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action=""> 
+            <div>
+                <span class="tit">Personal Details</span>
+            <div class="feilds">
+                <div class="input-feilds">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" placeholder="Enter your first name">
+                </div>
+                <div class="input-feilds">
+                    <label for="">Last Name</label>
+                    <input type="text" placeholder="Enter you last name">
+                </div>
+                <div class="input-feilds">
+                    <label for="">Mobile No</label>
+                    <input type="tel" placeholder="Enter your mob no" maxlength="10">
+                </div>
+                <div class="input-feilds">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="input-feilds">
+                    <label for="">DOB</label>
+                    <input type="date" placeholder="Enter your dob">
+                </div>
+                <div class="input-feilds">
+                    <label for="">Hobbies</label>
+                    <input type="text" placeholder="Enter your hobbies">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div>
+            <span class="docu">Identity Details</span>
+        <div class="feilds">
+            <div class="input-feilds">
+                <label for="">ID proof</label>
+                <input type="text" placeholder="Aadhar, Pan, passport etc...">
+            </div>
+            <div class="input-feilds">
+                <label for="">ID Number</label>
+                <input type="number" placeholder="Enter id">
+            </div>
+            <div class="input-feilds">
+                <label for="">Exp Date</label>
+                <input type="date">
+            </div>
+            <div class="input-feilds">
+                <label for="">Address</label>
+                <input type="text" placeholder="Enter your address">
+            </div>
+            <div class="input-feilds">
+                <label for="">State</label>
+                <input type="text" placeholder="Enter your state">
+            </div>
+            <div class="input-feilds">
+                <label for="">City</label>
+                <input type="text" placeholder="Enter your city">
+            </div>
+            <button type="submit" class="btn">Registration</button>
+        </div>
+    </div>
+        </form>
+    </div>
+</body>
+</html>

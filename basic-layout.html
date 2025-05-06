@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: slategray;
+            margin: 0;
+        }
+        .wrapper{
+            width: 1000px;
+            background-color: white;
+            margin: 0 auto;
+        }
+        .header{
+            background-color: crimson;
+            
+        }
+        .header h1{
+            margin: 0;
+            height: 100px;
+            color: white;
+            padding: 30px 50px;
+        }
+        .menu{
+            background-color:rgb(111, 210, 244);
+        }
+        .menu ul{
+            margin: 0;
+        }
+        .menu li{
+         display: inline-block;
+         
+        }
+        .menu li a{
+         display: block;
+         padding: 10px 13px;
+         text-decoration: none;
+         color: black;
+        }
+        .menu li a:hover{
+        background-color: crimson;
+         color: white;
+        }
+        .content{
+            float: left;
+            width: 800px;
+            padding:15px;
+            text-align: justify;
+            min-height: 400px;
+        }
+        .sidebar{
+            background-color: lightblue;
+            float: right;
+            width: 200px;
+            min-height: 400px;
+        }
+        .sidebar ul{
+            padding:0;
+        }
+        .sidebar li{
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        .sidebar a{
+            text-decoration-line: none;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid blue;
+        }
+        .footer{
+            background-color: crimson;
+            clear: both;
+            padding: 13px;
+            text-align: right;
+        }
+       
+        @media screen and (max-width : 992px) {
+            .wrapper{
+                width: 95%;
+            }
+            .content{
+                width: 75%;
+            }
+            .sidebar{
+                width:25%;
+                height: 423px
+            }
+        }
+        @media screen and (max-width : 768px) {
+            .wrapper{
+                width:auto;
+            }
+            .content{
+                width: 65%;
+            }
+            .sidebar{
+                width: 35%;
+                height: 439px
+            }
+        }
+        @media screen and (min-width: 470px) and (max-width : 756px) {
+            .sidebar{
+                height: 460px;
+            }
+        }
+        /* @media screen and (max-width : 470px) {
+            .wrapper{
+                width: auto;
+            }
+            .content{
+                width: 100%;
+                float: none;
+            }
+            .sidebar{
+                width: 100%;
+                float: none;
+                
+            }
+        } */
+        /* @media screen and (max-width : 289px) {
+            .wrapper{
+                width: au;
+            } */
+          
+        @media screen and (min-width: 250px) and (max-width : 469px) {
+            .header h1{
+                font-size: 25px;
+            }
+        
+            .header h1{
+                text-align :center
+            }
+            .menu li{
+                display: block;
+            }
+
+            .content{
+                width: 100%;
+                float: none;
+                text-align: center;
+            }
+            .c{
+                text-align: justify;
+            }
+            .sidebar{
+                width: 100%;
+                float: none;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Yahoo Baba</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="content c">
+            <h2>sub Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique aliquid tempora ex eum blanditiis optio reiciendis repellendus, nihil natus aperiam tempore aspernatur obcaecati minus odit nemo nam qui dignissimos, itaque eaque animi quaerat iure assumenda quidem quibusdam. At laudantium nam nobis minus ullam, cum deserunt voluptatum veniam dolores facere debitis omnis voluptatibus quod, illo placeat fuga autem! Aperiam dolorum ipsam animi eos sapiente provident amet officia facilis debitis minus. Illo vel dignissimos ut nobis rem quisquam accusamus voluptatibus cupiditate eos. Veritatis earum ut neque sed voluptates eius commodi repellat suscipit quisquam, officia, iusto modi aliquam vero? Magnam similique officia harum?</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            RahulRajak@copyright 2024
+        </div>
+    </div>
+</body>
+</html>

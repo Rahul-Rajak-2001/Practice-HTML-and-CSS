@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            background-color: #eee;
+            margin: 50px;
+            padding: 20px;
+        }
+        ul li{
+            display: flex;
+            padding: 5px 0;
+            justify-content: flex-end;
+        }
+        ul li label{
+            flex-grow: 1;
+        }
+        @media screen and (min-width: 250px) and (max-width: 499px)
+        {
+            ul li{
+                flex-direction: column;
+            }
+            ul li input{
+                flex-grow: 3;
+            }
+        }
+        @media screen and (min-width: 500px)
+        {
+            ul li input{
+                flex-grow: 5;
+            }
+        }
+        @media screen and (min-width: 768px)
+        {
+            ul li input{
+                flex-grow: 8;
+            }
+        }
+
+        @media screen and (min-width: 992px)
+        {
+            ul li input{
+                flex-grow: 12;
+            }
+        }
+
+        @media screen and (min-width: 1200px)
+        {
+            ul li input{
+                flex-grow: 15;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label for="class">Class</label>
+                <input type="text" id="class">
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </li>
+            <li>
+                <button type="submit">save</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

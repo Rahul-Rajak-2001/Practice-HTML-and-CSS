@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+a{
+    text-decoration-line: none;
+}
+/* =========Header Start============= */
+header{
+    background-color: #566c2b;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+header a{
+    color: white;
+}
+header .logo{
+    margin: 0 auto;
+    font-size: 30px;
+}
+.menu li{
+    padding: 10px;
+}
+.social-links li{
+    padding: 10px;
+}
+/* =========Header End============= */
+main{
+    display: flex;
+}
+
+aside{
+    flex: 0 0 20vw;
+    background-color: beige;
+    padding: 10px;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+aside a{
+    padding: 10px;
+    color: #566c2b;
+    border-bottom: 1px solid gray;
+    display: block;
+}
+aside img{
+  width: 100%;
+}
+article{
+    padding: 10px;
+}
+article p{
+    text-align: justify;
+}
+.services-container{
+    display: flex;
+    justify-content: space-between;
+}
+.service-box{
+    border: 1px solid #eee;
+    padding: 10px;
+    flex-basis: 37%;
+    max-width: 370px;  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.service-box img{
+   width: 100%;
+}
+.service-title h3{
+    margin: 5px 0 10px;
+ }
+ .service-desc p{
+    margin: 0 0 10px;
+    text-align: justify;
+ }
+.call-to-action {
+    justify-content: flex-start;
+    margin-top: auto;
+}
+.call-to-action a{
+    background-color: gray;
+    color: white;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.call-to-action a:hover{
+    background-color:transparent;
+    border: 1px solid grey;
+    color: grey
+}
+footer{
+    background-color: #566c2b;;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+@media screen and (max-width : 600px)
+{
+    header{
+        flex-direction: column;
+    }
+    header .logo{
+        order: -1;
+    }
+    article{
+      order: -1;
+    }
+    main{
+        flex-direction: column;
+    }
+    .services-container{
+      flex-direction: column;
+      align-items: center;
+    }
+    main h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width : 860px)
+{
+    aside{
+        flex: 0 0 29vw;
+    }
+    .service-box{
+        flex-basis:49%;
+    }
+    .services-container{
+      flex-wrap: wrap;
+    }
+}
